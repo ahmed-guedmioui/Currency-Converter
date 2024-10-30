@@ -16,21 +16,21 @@ class ExchangeRepositoryImpl(
     private val tag = "ExchangeRepositoryImpl: "
 
     private val baseUrl = "https://v6.exchangerate-api.com/v6"
-    private val apiKey = "xxx"
+    private val apiKey = "5fb12bdb7af9c5ea0d0fe2c4"
 
     override suspend fun convert(
         fromCurrency: String, toCurrency: String, amount: Double
     ): Double {
 
-        val result: ExchangeDto = httpClient.get(
-            "$baseUrl/$apiKey/pair/$fromCurrency/$toCurrency/$amount"
-        ).body()
+//        val result: ExchangeDto = httpClient.get(
+//            "$baseUrl/$apiKey/pair/$fromCurrency/$toCurrency/$amount"
+//        ).body()
+//
+//        println(tag + result.conversion_result)
+//
+//        return result.conversion_result
 
-        println(tag + result.conversion_result)
-
-        return result.conversion_result
-
-//        return amount * 0.5
+        return 243.61
 
     }
 

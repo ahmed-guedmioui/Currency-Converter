@@ -28,6 +28,16 @@ class MainActivity : ComponentActivity() {
         setContent {
             CurrencyExchangeAppTheme {
 
+                Scaffold(
+                ) { paddingValues ->
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(MaterialTheme.colorScheme.surfaceContainer)
+                    ) {
+                        ExchangeScreenCore()
+                    }
+                }
 
             }
         }
